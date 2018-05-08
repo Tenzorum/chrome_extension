@@ -78,7 +78,7 @@ class App extends Component {
 
     return (
       <div className="App">
-          { viewSignInButton && <button style={{borderRadius: 6, backgroundColor: '#00D4FA', fontSize: 20, color: 'white', borderWidth: 0, height: 40, width: 200}} onClick={() => this.setState({viewQRCode: !viewQRCode, viewSignInButton: !viewSignInButton})}>Login</button> }
+          { viewSignInButton && <button style={{borderRadius: 6, backgroundColor: '#00D4FA', fontSize: 20, color: 'white', borderWidth: 0, height: 40, width: 200, outline: 'none'}} onClick={() => this.setState({viewQRCode: !viewQRCode, viewSignInButton: !viewSignInButton})}>Login</button> }
           { viewQRCode && qrCodeData && !loggedIn &&
             <QRCode
               className="App-logo"
@@ -88,7 +88,11 @@ class App extends Component {
             />
            }
           { loggedIn &&
-            <div style={{ display: 'flex', height: '400', width: '150', backgroundColor: '#1D2533', padding: 10, flexDirection: 'column' }}>
+            <div style={{ display: 'flex', height: '100%', width: '100%', backgroundColor: '#1D2533', padding: 10, flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ display: 'flex', width: '100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' }}>
+                <h1 style={{color: 'white'}}>Tenzorum</h1>
+                <img src={require('./assets/Tenz_logo.png')} style={{height: 30, }} />
+              </div>
               <div style={{ display: 'flex', flexDirection: 'row' }}>
                 <div style={{ display: 'flex', margin: 10, backgroundColor: 'white', height: 100, width: 100, borderRadius: 5, alignItems: 'center', justifyContent: 'center' }}>
                   <img style={{ width: 50}} src={require('./assets/olympus_logo.png')} alt=""/>
