@@ -3,3 +3,8 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+@font-face {
+  font-family: 'Ailerons';
+  src: local('Ailerons'), url(./fonts/Ailerons-Typeface.otf) format('otf');
+}

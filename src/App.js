@@ -78,7 +78,9 @@ class App extends Component {
 
     return (
       <div className="App">
-          { viewSignInButton && <button style={{borderRadius: 6, backgroundColor: '#00D4FA', fontSize: 20, color: 'white', borderWidth: 0, height: 40, width: 200, outline: 'none'}} onClick={() => this.setState({viewQRCode: !viewQRCode, viewSignInButton: !viewSignInButton})}>Login</button> }
+          { viewSignInButton && <button style={{borderRadius: 6, backgroundColor: '#1D2533', fontSize: 20, color: 'white', fontFamily: 'Ailerons', borderWidth: 0, height: 40, width: 300, outline: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center'}} onClick={() => this.setState({viewQRCode: !viewQRCode, viewSignInButton: !viewSignInButton})}>
+            LOGIN WITH TENZORUM<img src={require('./assets/Tenz_logo.png')} style={{height: 15, marginLeft: 5}}/>
+          </button> }
           { viewQRCode && qrCodeData && !loggedIn &&
             <QRCode
               className="App-logo"
